@@ -31,6 +31,7 @@ class ProdukController extends Controller
         ->orWhere('produks.warna_produk','LIKE',"%$cari%")
         ->orWhere('kategori_produks.nama_kategori','LIKE',"%$cari%")
         ->paginate($batas);
+        
     
     return view('produk.index',compact('queryproduk','querykategori','no','cari'));
     }
