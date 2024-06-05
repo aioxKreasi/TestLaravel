@@ -16,7 +16,8 @@ class ProdukController extends Controller
         // $queryproduk = Produk::all();
         $querykategori = KategoriProduk::all();
 
-        $batas = 5;
+        $batas = 10;
+        $ye = 2;
         $query = Produk::paginate($batas);
         $no = $batas * ($query->currentPage() - 1);
         $cari = $request->search;
